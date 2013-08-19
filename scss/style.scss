@@ -13,6 +13,52 @@
 @import "foundation";
 
 /* Start to customize Reverie */
+#{headings(all)} {
+	margin: 0;
+}
+
+[role="banner"] {
+	background: url('../img/bo_play_pattern.png');
+	margin: 0;
+	width: 100%;
+
+	h1 {
+		font-family: 'Press Start 2P', Monaco, sans-serif;
+		font-size: 56px;
+		text-transform: uppercase;
+		line-height: 0.6em;
+		padding-top: 2em;
+
+		a {
+			color: #fff;
+		}
+
+		a:hover {
+			color: #fff
+		}
+	}
+
+	#{headings(all)} {
+		text-align: center;
+	}
+}
+
+.contain-to-grid {
+	border-bottom: 1px solid #eee;
+	margin-bottom: emCalc(30);
+
+	.top-bar-section {
+		text-align: center;
+
+		ul {
+			float: none !important;
+			display: inline-block;
+
+			li {
+			}
+		}
+	}
+}
 
 // add some extra style to row to beautify custom background image
 header.row,

@@ -33,21 +33,27 @@
 	<!-- Startup Image iPhone (320x460) -->
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
 
+	<link href='http://fonts.googleapis.com/css?family=Press+Start+2P|Vollkorn|Cabin' rel='stylesheet' type='text/css'>
+
 <?php wp_head(); ?>
 
 </head>
 
 <body <?php body_class(); ?>>
 
+<header role="banner">
+<div class="banner-inner">
+	<!-- <h6 class="subheader"><?php bloginfo('description'); ?></h6> -->
+	<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
+</div>
+</header>
+
 <div class="contain-to-grid">
 	<!-- Starting the Top-Bar -->
-	<nav class="top-bar">
+	<nav class="top-bar sticky">
 	    <ul class="title-area">
-	        <li class="name">
-	        	<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-	        </li>
 			<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+			<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
 	    </ul>
 	    <section class="top-bar-section">
 	    <?php
@@ -63,22 +69,10 @@
 	            ) ),
 	        ) );
 	    ?>
-	    <ul class="right">
-	    	<li class="divider hide-for-small"></li>
-	    	<li class="has-form"><?php get_search_form(); ?></li>
-	    </ul>
 	    </section>
 	</nav>
 	<!-- End of Top-Bar -->
 </div>
-
-<header class="row" role="banner">
-	<div class="small-12 columns">
-		<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
-		<h4 class="subheader"><?php bloginfo('description'); ?></h4>
-		<hr/>
-	</div>
-</header>
 
 <!-- Start the main container -->
 <section class="container" role="document">

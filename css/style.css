@@ -1,8 +1,9 @@
+@charset "UTF-8";
 /* Welcome and glad you are using Reverie.
  * This is the main stylesheet loaded by default.
  * Edit the file and have fun.
  * http://themefortress.com/reverie */
-/* normalize.css v2.1.1 | MIT License | git.io/normalize */
+/*! normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -397,7 +398,7 @@ body {
   color: #222222;
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Cabin", sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -1728,7 +1729,7 @@ p aside {
 
 /* Default header styles */
 h1, h2, h3, h4, ol.commentlist cite.fn, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Vollkorn", sans-serif;
   font-weight: bold;
   font-style: normal;
   color: #222222;
@@ -3848,10 +3849,10 @@ label.error {
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid {
   width: 100%;
-  background: #111111;
+  background: white;
 }
 .contain-to-grid .top-bar {
-  margin-bottom: 1.875em;
+  margin-bottom: 0;
 }
 
 .fixed {
@@ -3867,8 +3868,8 @@ label.error {
   height: 45px;
   line-height: 45px;
   position: relative;
-  background: #111111;
-  margin-bottom: 1.875em;
+  background: white;
+  margin-bottom: 0;
 }
 .top-bar ul {
   margin-bottom: 0;
@@ -3905,7 +3906,7 @@ label.error {
 }
 .top-bar .name h1 a {
   font-weight: bold;
-  color: white;
+  color: #222222;
   width: 50%;
   display: block;
   padding: 0 15px;
@@ -3916,7 +3917,7 @@ label.error {
   top: 0;
 }
 .top-bar .toggle-topbar a {
-  color: white;
+  color: #222222;
   text-transform: uppercase;
   font-size: 0.8125em;
   font-weight: bold;
@@ -3954,7 +3955,7 @@ label.error {
   background: transparent;
 }
 .top-bar.expanded .title-area {
-  background: #111111;
+  background: white;
 }
 .top-bar.expanded .toggle-topbar a {
   color: #888888;
@@ -3982,8 +3983,8 @@ label.error {
 }
 .top-bar-section .divider,
 .top-bar-section [role="separator"] {
-  border-bottom: solid 1px #2b2b2b;
-  border-top: solid 1px black;
+  border-bottom: solid 1px white;
+  border-top: solid 1px #e6e6e6;
   clear: both;
   height: 1px;
   width: 100%;
@@ -3991,16 +3992,16 @@ label.error {
 .top-bar-section ul li > a {
   display: block;
   width: 100%;
-  color: white;
+  color: #222222;
   padding: 12px 0 12px 0;
   padding-left: 15px;
-  font-size: 0.8125em;
-  font-weight: bold;
+  font-size: 1.125em;
+  font-weight: 400;
   background: #222222;
 }
 .top-bar-section ul li > a.button {
   background: #2ba6cb;
-  font-size: 0.8125em;
+  font-size: 1.125em;
 }
 .top-bar-section ul li > a.button.hover {
   background: #2284a1;
@@ -4024,12 +4025,12 @@ label.error {
   background: #970b0e;
 }
 .top-bar-section ul li.hover > a {
-  background: #090909;
-  color: white;
+  background: white;
+  color: #333333;
 }
 .top-bar-section ul li.active > a {
-  background: #090909;
-  color: white;
+  background: white;
+  color: #333333;
 }
 .top-bar-section .has-form {
   padding: 15px;
@@ -4073,13 +4074,13 @@ label.error {
   padding: 8px 15px;
 }
 .top-bar-section .dropdown li a.parent-link {
-  font-weight: bold;
+  font-weight: 400;
 }
 .top-bar-section .dropdown li.title h5 {
   margin-bottom: 0;
 }
 .top-bar-section .dropdown li.title h5 a {
-  color: white;
+  color: #222222;
   line-height: 22.5px;
   display: block;
 }
@@ -4103,7 +4104,7 @@ label.error {
 
 @media only screen and (min-width: 58.75em) {
   .top-bar {
-    background: #111111;
+    background: white;
     *zoom: 1;
     overflow: visible;
   }
@@ -4133,13 +4134,13 @@ label.error {
     top: 8px;
   }
   .top-bar.expanded {
-    background: #111111;
+    background: white;
   }
 
   .contain-to-grid .top-bar {
     max-width: 62.5em;
     margin: 0 auto;
-    margin-bottom: 1.875em;
+    margin-bottom: 0;
   }
 
   .top-bar-section {
@@ -4162,7 +4163,7 @@ label.error {
   .top-bar-section li a:not(.button) {
     padding: 0 15px;
     line-height: 45px;
-    background: #111111;
+    background: white;
   }
   .top-bar-section li a:not(.button).hover {
     background: black;
@@ -4207,11 +4208,11 @@ label.error {
     line-height: 1;
     white-space: nowrap;
     padding: 7px 15px;
-    background: #1e1e1e;
+    background: white;
   }
   .top-bar-section .dropdown li label {
     white-space: nowrap;
-    background: #1e1e1e;
+    background: white;
   }
   .top-bar-section .dropdown li .dropdown {
     left: 100%;
@@ -4220,14 +4221,14 @@ label.error {
   .top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {
     border-bottom: none;
     border-top: none;
-    border-right: solid 1px #2b2b2b;
-    border-left: solid 1px black;
+    border-right: solid 1px white;
+    border-left: solid 1px #e6e6e6;
     clear: none;
     height: 45px;
     width: 0px;
   }
   .top-bar-section .has-form {
-    background: #111111;
+    background: white;
     padding: 0 15px;
     height: 45px;
   }
@@ -4240,12 +4241,12 @@ label.error {
   }
 
   .no-js .top-bar-section ul li:hover > a {
-    background: #090909;
-    color: white;
+    background: white;
+    color: #333333;
   }
   .no-js .top-bar-section ul li:active > a {
-    background: #090909;
-    color: white;
+    background: white;
+    color: #333333;
   }
   .no-js .top-bar-section .has-dropdown:hover > .dropdown {
     visibility: visible;
@@ -6139,6 +6140,44 @@ a.th {
 }
 
 /* Start to customize Reverie */
+h1, h2, h3, h4, ol.commentlist cite.fn, h5, h6 {
+  margin: 0;
+}
+
+[role="banner"] {
+  background: url("../img/bo_play_pattern.png");
+  margin: 0;
+  width: 100%;
+}
+[role="banner"] h1 {
+  font-family: 'Press Start 2P', Monaco, sans-serif;
+  font-size: 56px;
+  text-transform: uppercase;
+  line-height: 0.6em;
+  padding-top: 2em;
+}
+[role="banner"] h1 a {
+  color: #fff;
+}
+[role="banner"] h1 a:hover {
+  color: white;
+}
+[role="banner"] h1, [role="banner"] h2, [role="banner"] h3, [role="banner"] h4, [role="banner"] ol.commentlist cite.fn, ol.commentlist [role="banner"] cite.fn, [role="banner"] h5, [role="banner"] h6 {
+  text-align: center;
+}
+
+.contain-to-grid {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1.875em;
+}
+.contain-to-grid .top-bar-section {
+  text-align: center;
+}
+.contain-to-grid .top-bar-section ul {
+  float: none !important;
+  display: inline-block;
+}
+
 header.row,
 .container.row,
 .row.full-width {
