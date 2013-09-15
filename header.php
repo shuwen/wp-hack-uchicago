@@ -43,7 +43,7 @@
 
 <div id="root">
 
-<header role="banner">
+<header role="banner" style="background-image: url(<?php header_image(); ?>);">
 <div class="row">
 	<div class="small-12 large-12 columns">
 		<!-- <h6 class="subheader"><?php bloginfo('description'); ?></h6> -->

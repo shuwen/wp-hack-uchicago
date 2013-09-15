@@ -67,6 +67,8 @@ function reverie_theme_support() {
 	    'admin-preview-callback' => ''
 	    )
 	);
+
+	add_theme_support( 'custom-header' );
 }
 add_action('after_setup_theme', 'reverie_theme_support'); /* end Reverie theme support */
 
