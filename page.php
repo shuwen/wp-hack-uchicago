@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 <!-- Row for main content area -->
+<div class="row">
 	<div class="small-12 large-8 columns" role="main">
 	
 	<?php /* Start loop */ ?>
@@ -23,5 +24,6 @@
 
 	</div>
 	<?php get_sidebar(); ?>
+</div>
 		
 <?php get_footer(); ?>

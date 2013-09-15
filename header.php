@@ -33,7 +33,7 @@
 	<!-- Startup Image iPhone (320x460) -->
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
 
-	<link href='http://fonts.googleapis.com/css?family=Press+Start+2P|Vollkorn|Cabin' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Press+Start+2P|Vollkorn|Cabin|Poly' rel='stylesheet' type='text/css'>
 
 <?php wp_head(); ?>
 
@@ -42,18 +42,21 @@
 <body <?php body_class(); ?>>
 
 <header role="banner">
-<div class="banner-inner">
-	<!-- <h6 class="subheader"><?php bloginfo('description'); ?></h6> -->
-	<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
+<div class="row">
+	<div class="small-12 large-12 columns">
+		<!-- <h6 class="subheader"><?php bloginfo('description'); ?></h6> -->
+		<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
+	</div>
 </div>
 </header>
 
-<div class="contain-to-grid">
+<div class="affix contain-to-grid">
 	<!-- Starting the Top-Bar -->
-	<nav class="top-bar sticky">
+	<nav class="top-bar">
 	    <ul class="title-area">
+	    	<li class="title"><a href="#">&nbsp;</a></li>
 			<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-			<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 	    </ul>
 	    <section class="top-bar-section">
 	    <?php
@@ -76,4 +79,3 @@
 
 <!-- Start the main container -->
 <section class="container" role="document">
-	<div class="row">

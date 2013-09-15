@@ -3,18 +3,19 @@
  * Edit the file and have fun.
  * http://themefortress.com/reverie */
 
-// import normalize, stay at top
 @import "normalize";
-
-// Global Foundation Settings
-@import "settings";
+@import "partials/settings";
 
 // Comment out this import if you are customizing you imports below
 @import "foundation";
 
 /* Start to customize Reverie */
+body {
+	overflow-x: hidden;
+}
+
 #{headings(all)} {
-	margin: 0;
+	font-weight: 200;
 }
 
 [role="banner"] {
@@ -23,53 +24,89 @@
 	width: 100%;
 
 	h1 {
-		font-family: 'Press Start 2P', Monaco, sans-serif;
+		font-family: 'Press Start 2P', Monaco, monospace;
 		font-size: 56px;
 		text-transform: uppercase;
-		line-height: 0.6em;
-		padding-top: 2em;
+		line-height: 0.618em;
+		padding-top: 3em;
 
 		a {
 			color: #fff;
 		}
-
 		a:hover {
-			color: #fff
+			color: #fff;
 		}
 	}
 
 	#{headings(all)} {
+		margin: 0;
 		text-align: center;
 	}
 }
 
 .contain-to-grid {
-	border-bottom: 1px solid #eee;
-	margin-bottom: emCalc(30);
+	/**
+	 * Foundation top-bar container
+	 */
+	border-bottom: 1px solid #ddd;
+	box-shadow: 0 5px 5px -5px #ddd;
+	z-index: 40;
 
-	.top-bar-section {
-		text-align: center;
+	.top-bar {
 
-		ul {
-			float: none !important;
-			display: inline-block;
+		.top-bar-section {
+			text-align: center;
 
-			li {
+			ul {
+				float: none !important;
+				display: inline-block;
+				text-align: left;
+
+				li {
+					font-family: 'Cabin', sans-serif;
+				}
 			}
-		}
-	}
+
+			& > ul > li > a {
+			/**
+			 * Top-level menu items
+			 */
+			 	font-weight: 700;
+				text-transform: uppercase;
+			}
+
+			.dropdown {
+			/**
+			 * Dropdown Menu
+			 */
+				box-sizing: border-box;
+				box-shadow: 0 5px 10px -5px #eee;
+				border: 1px solid #ddd;
+				z-index: 20;
+
+				.dropdown {
+					/* Remove top margin for subsequent sub-menus */
+					margin-top: -1px;
+				}
+
+				li {
+					/**
+					 * Topbar menu item
+					 */
+
+				}
+			}
+
+		} /* end .top-bar-section */
+	} /* end .top-bar */
 }
 
-// add some extra style to row to beautify custom background image
-header.row,
-.container.row,
-.row.full-width {
-	background-color: rgba(255,255,255,0.9);
+.container {
+	padding-top: emCalc(30);
 }
 
-// adjusting header
-h4.subheader {
-	margin-top: -1em;
+.single-post [role="main"] {
+	padding-left: 0 !important;
 }
 
 // add new pagination class for WordPress, Sass is amazingly fast

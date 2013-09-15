@@ -1,15 +1,21 @@
 <?php get_header(); ?>
 
-<!-- Row for main content area -->
-	<div class="small-12 large-8 columns" role="main">
-	
-	<?php /* Start loop */ ?>
-	<?php while (have_posts()) : the_post(); ?>
+<?php /* Start loop */ ?>
+<?php while (have_posts()) : the_post(); ?>
+
+<div class="row">
+	<div class="small-12 large-offset-3 large-10 columnsn">
+		<h1 class="entry-title"><?php the_title(); ?></h1>
+	</div>
+</div>
+
+<div class="row">
+	<aside class="small-12 large-3 columns">
+		<?php reverie_entry_meta(); ?>
+	</aside>
+
+	<div class="small-12 large-9 columns" role="main">
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			<header>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-				<?php reverie_entry_meta(); ?>
-			</header>
 			<div class="entry-content">
 				<?php the_content(); ?>
 			</div>
@@ -19,9 +25,9 @@
 			</footer>
 			<?php comments_template(); ?>
 		</article>
-	<?php endwhile; // End the loop ?>
-
 	</div>
-	<?php get_sidebar(); ?>
+</div>
+
+<?php endwhile; // End the loop ?>
 		
 <?php get_footer(); ?>
