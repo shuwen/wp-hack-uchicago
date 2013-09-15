@@ -6,6 +6,8 @@
 @import "normalize";
 @import "partials/settings";
 
+@import "compass/layout/sticky-footer";
+
 // Comment out this import if you are customizing you imports below
 @import "foundation";
 
@@ -15,6 +17,7 @@ body {
 }
 
 #{headings(all)} {
+	margin: 0;
 	font-weight: 200;
 }
 
@@ -39,7 +42,7 @@ body {
 	}
 
 	#{headings(all)} {
-		margin: 0;
+		margin-top: 0;
 		text-align: center;
 	}
 }
@@ -61,10 +64,6 @@ body {
 				float: none !important;
 				display: inline-block;
 				text-align: left;
-
-				li {
-					font-family: 'Cabin', sans-serif;
-				}
 			}
 
 			& > ul > li > a {
@@ -72,6 +71,7 @@ body {
 			 * Top-level menu items
 			 */
 			 	font-weight: 700;
+				font-family: 'Roboto Condensed', sans-serif;
 				text-transform: uppercase;
 			}
 
@@ -82,7 +82,7 @@ body {
 				box-sizing: border-box;
 				box-shadow: 0 5px 10px -5px #eee;
 				border: 1px solid #ddd;
-				z-index: 20;
+				z-index: 10;
 
 				.dropdown {
 					/* Remove top margin for subsequent sub-menus */
@@ -91,18 +91,53 @@ body {
 
 				li {
 					/**
-					 * Topbar menu item
+					 * Dropdown menu item
 					 */
-
+					a {
+						font-size: emCalc(14px);
+						padding-top: 0.7em;
+						padding-bottom: 0.7em;
+					}
 				}
 			}
 
 		} /* end .top-bar-section */
 	} /* end .top-bar */
+} /* end .contain-to-grid */
+
+.entry-meta {
+	font-size: emCalc(14px);
+	margin: 1em 0;
+	line-height: 1em;
+	color: #999;
+
+	p {
+		margin: 0;
+	}
 }
+
+.avatar {
+	padding: 3px;
+	margin: 3px;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 5px #ccc;
+	border-radius: 100%;
+}
+
 
 .container {
 	padding-top: emCalc(30);
+}
+
+@include sticky-footer(88px);
+
+#footer {
+	background: #111;
+	padding-top: 1em;
+
+	p {
+		font-size: emCalc(14);
+	}
 }
 
 .single-post [role="main"] {
@@ -191,7 +226,7 @@ img.alignleft {
 img.aligncenter {
 	display: block;
 	margin: 18px auto;
-	}
+}
 
 // Add HTML5 Caption Class for Images
 figure.figure {

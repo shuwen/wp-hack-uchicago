@@ -1,13 +1,15 @@
 </section><!-- Container End -->
 
-<div class="row full-width">
-	<?php dynamic_sidebar("Footer"); ?>
-</div>
+<div id="root_footer"></div>
 
-<footer class="row full-width" role="contentinfo">
+</div> <!-- /root -->
+
+<footer id="footer" role="contentinfo">
+<div class="row">
 	<div class="small-12 large-12 columns">
-		<p>&copy; <?php echo date('Y'); ?>. <?php _e('Crafted on','reverie'); ?> <a href="http://themefortress.com/reverie/" rel="nofollow" title="Reverie Framework">Reverie</a>.</p>
+		<?php dynamic_sidebar("Footer"); ?>
 	</div>
+</div>
 </footer>
 
 <?php wp_footer(); ?>

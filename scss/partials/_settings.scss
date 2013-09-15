@@ -4,7 +4,7 @@
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
-$base-font-size: 18px;
+$base-font-size: 16px;
 
 // $base-line-height is 24px while $base-font-size is 16px
 // $base-line-height: 150%;
@@ -53,7 +53,7 @@ $default-float: left;
 
 // $body-bg: #fff;
 $body-font-color: #333;
-$body-font-family: "Poly", sans-serif;
+$body-font-family: 'Roboto', sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -138,7 +138,7 @@ $body-font-family: "Poly", sans-serif;
 //
 
 // $row-width: emCalc(1000);
-// $column-gutter: emCalc(30);
+$column-gutter: emCalc(56);
 // $total-columns: 12;
 
 //
@@ -160,7 +160,7 @@ $body-font-family: "Poly", sans-serif;
 
 // Control header font styles
 
-$header-font-family: "Cabin", sans-serif;
+$header-font-family: 'Roboto Condensed', sans-serif;
 // $header-font-weight: bold;
 // $header-font-style: normal;
 $header-font-color: #333;
@@ -1250,15 +1250,6 @@ $topbar-margin-bottom: 0;
 // $topbar-title-weight: bold;
 // $topbar-title-font-size: emCalc(17);
 
-// Style the top bar dropdown elements
-
-$topbar-dropdown-bg: #fff;
-$topbar-dropdown-link-color: #333;
-// $topbar-dropdown-link-bg: lighten($topbar-bg, 5%);
-// $topbar-dropdown-toggle-size: 5px;
-$topbar-dropdown-toggle-color: #222;
-// $topbar-dropdown-toggle-alpha: 0.5;
-
 // Set the link colors and styles for top-level nav
 
 $topbar-link-color: #333;
@@ -1267,8 +1258,17 @@ $topbar-link-color-active: #333;
 $topbar-link-weight: 400;
 $topbar-link-font-size: emCalc(16);
 $topbar-link-hover-lightness: -30%; // Darken by 30%
-// $topbar-link-bg-hover: #fff;
-// $topbar-link-bg-active: #fff;
+$topbar-link-bg-hover: #eee;
+$topbar-link-bg-active: #eee;
+
+// Style the top bar dropdown elements
+
+$topbar-dropdown-bg: #fff;
+$topbar-dropdown-link-color: lighten($topbar-link-color, 20%);
+$topbar-dropdown-link-bg: lighten($topbar-bg, 5%);
+$topbar-dropdown-toggle-size: 5px;
+$topbar-dropdown-toggle-color: #222;
+$topbar-dropdown-toggle-alpha: 0.5;
 
 $topbar-dropdown-label-color: #222;
 // $topbar-dropdown-label-text-transform: uppercase;
