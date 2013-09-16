@@ -10,7 +10,7 @@
 </div> -->
 
 <div class="row">
-	<aside class="small-12 large-3 columns">
+	<aside class="small-12 large-3 columns meta-container">
 		<?php echo get_avatar( get_the_author_meta( 'ID' ) ); ?>
 		<?php reverie_entry_meta(); ?>
 	</aside>

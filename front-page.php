@@ -56,6 +56,8 @@
 		$entry_title_color = get_post_meta($post->ID, 'entry_title_color', true);
 		$entry_text_color = get_post_meta($post->ID, 'entry_text_color', true);
 		$entry_bg_color = get_post_meta($post->ID, 'entry_bg_color', true);
+
+		$hide_title = filter_var(get_post_meta($post->ID, 'hide_title', true), FILTER_VALIDATE_BOOLEAN) || false;
 	?>
 
 <section class="entry" <?php if ($entry_bg_color) echo 'style="background-color: ' . $entry_bg_color . '; color: ' . $entry_text_color . ';"' ?> >
@@ -63,9 +65,11 @@
 	<div class="small-12 large-12 columns">
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<h1 class="entry-title" <?php if ($entry_title_color) echo 'style="color: ' . $entry_title_color . ';"' ?> >
-			<?php echo ($long_title) ? $long_title : the_title($echo = false); ?>
-		</h1>
+		<?php if( !$hide_title ): ?>
+			<h1 class="entry-title" <?php if ($entry_title_color) echo 'style="color: ' . $entry_title_color . ';"' ?> >
+				<?php echo ($long_title) ? $long_title : the_title($echo = false); ?>
+			</h1>
+		<?php endif; ?>
 		<div class="entry-content">
 			<?php the_content(); ?>
 		</div>

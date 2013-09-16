@@ -6250,11 +6250,15 @@ h1, h2, h3, h4, ol.commentlist cite.fn, h5, h6 {
   margin: 0;
 }
 
+.meta-container {
+  text-align: right;
+}
+
 .avatar {
   padding: 3px;
   margin: 3px;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 5px #ccc;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 5px #ddd;
   border-radius: 100%;
 }
 
