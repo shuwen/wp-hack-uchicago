@@ -6258,12 +6258,17 @@ h1, h2, h3, h4, ol.commentlist cite.fn, h5, h6 {
   border-radius: 100%;
 }
 
-.hero {
+.container > section > .row,
+.container > .row {
+  padding-top: 1.875em;
   padding-bottom: 1.875em;
 }
 
-.container {
-  padding-top: 1.875em;
+.hero {
+  text-align: justify;
+}
+.hero .row {
+  padding-bottom: 0 !important;
 }
 
 html, body {
@@ -6290,7 +6295,6 @@ html, body {
 #footer {
   background: #111;
   padding-top: 1em;
-  margin-top: 1.875em;
 }
 #footer p {
   font-size: 0.875em;

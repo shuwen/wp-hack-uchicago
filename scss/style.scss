@@ -142,12 +142,18 @@ body {
 	border-radius: 100%;
 }
 
-.hero {
+.container > section > .row,
+.container > .row {
+	padding-top: emCalc(30);
 	padding-bottom: emCalc(30);
 }
 
-.container {
-	padding-top: emCalc(30);
+.hero {
+	text-align: justify;
+
+	.row {
+		padding-bottom: 0 !important;
+	}
 }
 
 @include sticky-footer(88px);
@@ -155,7 +161,7 @@ body {
 #footer {
 	background: #111;
 	padding-top: 1em;
-	margin-top: emCalc(30);
+	// margin-top: emCalc(30);
 
 	p {
 		font-size: emCalc(14);

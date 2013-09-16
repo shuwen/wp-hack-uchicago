@@ -1,15 +1,16 @@
 <?php get_header(); ?>
 
 <!-- Row for main content area -->
-<div class="hero">
+<section class="hero">
 <div class="row">
 	<div class="small-12 large-12 columns">
 		<h1><?php bloginfo('description'); ?></h1>
 	</div>
 </div>
-</div>
+</section>
 
-<div class="row">
+<section>
+	<div class="row">
 	<div class="small-12 large-12 columns" role="main">
 
 	<?php if ( have_posts() ) : ?>
@@ -31,7 +32,8 @@
 	<?php endif; // end have_posts() check ?>
 
 	</div>
-</div>
+	</div>
+</section>
 
 <?php 
 	/**
@@ -49,18 +51,29 @@
 	<?php /* Start the Loop */ ?>
 	<?php while ( have_posts() ) : the_post(); ?>
 
-	<div class="row">
+	<?php 
+		$long_title = get_post_meta($post->ID, 'long_title', true);
+		$entry_title_color = get_post_meta($post->ID, 'entry_title_color', true);
+		$entry_text_color = get_post_meta($post->ID, 'entry_text_color', true);
+		$entry_bg_color = get_post_meta($post->ID, 'entry_bg_color', true);
+	?>
+
+<section class="entry" <?php if ($entry_bg_color) echo 'style="background-color: ' . $entry_bg_color . '; color: ' . $entry_text_color . ';"' ?> >
+<div class="row">
 	<div class="small-12 large-12 columns">
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<h1 class="entry-title" <?php if ($entry_title_color) echo 'style="color: ' . $entry_title_color . ';"' ?> >
+			<?php echo ($long_title) ? $long_title : the_title($echo = false); ?>
+		</h1>
 		<div class="entry-content">
 			<?php the_content(); ?>
 		</div>
 	</article>
 	
 	</div>
-	</div>
+</div>
+</section>
 
 	<?php endwhile; ?>
 	
