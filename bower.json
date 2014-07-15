@@ -1,0 +1,23 @@
+{
+  "name": "wp-hack-uchicago",
+  "version": "0.2.0",
+  "homepage": "https://github.com/shuwen/wp-hack-uchicago",
+  "authors": [
+    "shuwen <shuwenq@gmail.com>"
+  ],
+  "description": "WordPress theme for hack@uchicago, acm, and cs student activities sites",
+  "main": "index.php",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fittext": "*",
+    "foundation": "zurb/bower-foundation#~5.3.0"
+  }
+}

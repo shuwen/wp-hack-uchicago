@@ -41,7 +41,7 @@
 	 */
 	query_posts(array(
 	'orderby' => 'menu_order',
-	'showposts' => $showposts,
+	// 'showposts' => $showposts,
 	'post_parent' => $post->ID,
 	'post_type' => 'page'));
 ?>
@@ -80,9 +80,6 @@
 </section>
 
 	<?php endwhile; ?>
-	
-	<?php else : ?>
-		<?php get_template_part( 'content', 'none' ); ?>
 	
 <?php endif; // end have_posts() check ?>
 		
