@@ -108,7 +108,7 @@ function reverie_scripts_and_styles() {
   if (!is_admin()) {
 
     // modernizr (without media query polyfill)
-    wp_register_script( 'reverie-modernizr', get_template_directory_uri() . '/js/vendor/custom.modernizr.js', array(), '2.6.2', false );
+    wp_register_script( 'reverie-modernizr', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js', array(), '2.6.2', false );
 
     // ie-only style sheet
     wp_register_style( 'reverie-ie-only', get_template_directory_uri() . '/css/ie.css', array(), '' );
