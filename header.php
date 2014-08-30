@@ -54,7 +54,7 @@
 
 <div class="affix contain-to-grid">
 	<!-- Starting the Top-Bar -->
-	<nav class="top-bar">
+	<nav class="top-bar" data-topbar role="navigation" data-options="sticky_class: affix">
 	    <ul class="title-area">
 	    	<li class="title"><a href="#">&nbsp;</a></li>
 			<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->

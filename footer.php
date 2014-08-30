@@ -12,12 +12,20 @@
 </div>
 </footer>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 <?php wp_footer(); ?>
 
 <script>
-	(function($) {
+	$(document).ready(function() {
 		$(document).foundation();
-	})(jQuery);
+		$(".contain-to-grid").headroom({
+			tolerance: {
+				up: 0,
+				down: 45
+			} // Topbar height
+		});
+	});
 </script>
 	
 </body>

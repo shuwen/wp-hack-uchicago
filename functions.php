@@ -33,6 +33,12 @@ require_once('lib/foundation.php'); // load Foundation specific functions like t
 */
 require_once('lib/presstrends.php'); // load PressTrends to track the usage of Reverie across the web, comment this line if you don't want to be tracked
 
+/*
+5. lib/enqueue-scripts.php
+	- enqueue custom Javascript files outside of Foundation javascripts
+*/
+require_once('lib/enqueue-javascripts.php'); 
+
 /**********************
 Add theme supports
 **********************/

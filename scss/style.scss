@@ -3,10 +3,10 @@
  * Edit the file and have fun.
  * http://themefortress.com/reverie */
 
-@import "normalize";
-@import "partials/settings";
-
+@import "compass/reset";
 @import "compass/layout/sticky-footer";
+
+@import "partials/settings";
 
 // Comment out this import if you are customizing you imports below
 @import "foundation";
@@ -20,6 +20,16 @@ body {
 #{headings(all)} {
 	margin: 0;
 	font-weight: 200;
+}
+
+.fixed.headroom {
+    transition: transform 200ms linear;
+}
+.fixed.headroom--pinned {
+	transform: translateY(0%);
+}
+.fixed.headroom--unpinned {
+	transform: translateY(-100%);
 }
 
 [role="banner"] {
