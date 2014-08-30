@@ -33,7 +33,7 @@
 	<!-- Startup Image iPhone (320x460) -->
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
 
-	<link href='//fonts.googleapis.com/css?family=Press+Start+2P|Roboto|Roboto+Condensed' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Press+Start+2P|Open+Sans|Open+Sans+Condensed' rel='stylesheet' type='text/css'>
 
 <?php wp_head(); ?>
 
