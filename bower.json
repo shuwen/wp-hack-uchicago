@@ -19,6 +19,7 @@
   "dependencies": {
     "fittext": "*",
     "foundation": "zurb/bower-foundation#~5.4.3",
-    "headroom.js": "~0.7.0"
+    "headroom.js": "~0.7.0",
+    "bigtext": "~0.1.6"
   }
 }

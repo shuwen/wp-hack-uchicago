@@ -43,13 +43,15 @@
 
 <div id="root">
 
-<header role="banner" style="background-image: url(<?php header_image(); ?>);">
-<div class="row">
-	<div class="small-12 large-12 columns">
-		<!-- <h6 class="subheader"><?php bloginfo('description'); ?></h6> -->
-		<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
+<header class="masthead" role="banner"
+	<?php if( get_header_image() != NULL ): ?>
+		style="background-image: url(<?php header_image(); ?>);"
+	<?php endif; ?>>
+	<div class="row">
+		<div class="small-12 large-12 columns">
+			<h1 class="site-title"><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
+		</div>
 	</div>
-</div>
 </header>
 
 <div class="affix contain-to-grid">

@@ -17,11 +17,10 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-#{headings(all)} {
-	margin: 0;
-	font-weight: 200;
-}
-
+/**
+ * Animate headroom.js transitions,
+ * but apply them only when Foundation top-bar is affix to top of viewport
+ */
 .fixed.headroom {
     transition: transform 200ms linear;
 }
@@ -32,157 +31,116 @@ body {
 	transform: translateY(-100%);
 }
 
-[role="banner"] {
+/**
+ * Masthead
+ */
+.masthead {
 	background-color: #222;
 	background-image: url('../img/bo_play_pattern.png');
 	background-repeat: repeat;
-	background-attachment: fixed;
+	// background-attachment: fixed;
 	margin: 0;
 	width: 100%;
 
-	h1 {
+	h1 { // Javascript handles dynamic font sizing, but em is calculated from default h1 font size
 		font-family: 'Press Start 2P', Monaco, monospace;
-		font-size: 56px;
+		line-height: 2em;
+		margin: 2em auto 1em;
 		text-transform: uppercase;
-		line-height: 0.618em;
-		padding-top: 3em;
-
-		a {
-			color: #fff;
-		}
-		a:hover {
-			color: #fff;
-		}
 	}
 
-	#{headings(all)} {
-		margin-top: 0;
-		text-align: center;
+	a, a:hover, a:active, a:visited {
+		color: #fff;
 	}
 }
 
+/**
+ * Topbar
+ */
 .contain-to-grid {
-	/**
-	 * Foundation top-bar container
-	 */
+	// Add bottom border to topbar
 	border-bottom: 1px solid darken($topbar-bg, 10%);
 	margin-bottom: -1px;
 	z-index: 40;
+}
 
-	.top-bar {
+.top-bar-section {
+	text-align: center;
 
-		.top-bar-section {
-			text-align: center;
+	ul {
+		float: none !important;
+		display: inline-block;
+		text-align: left;
+	}
 
-			ul {
-				float: none !important;
-				display: inline-block;
-				text-align: left;
-			}
+	.left > li > a {
+	/**
+	 * Top-level menu items
+	 */
+	 	font-weight: 700;
+		font-family: 'Open Sans Condensed', sans-serif;
+		text-transform: uppercase;
+	}
+} /* end .top-bar-section */
 
-			& > ul > li > a {
-			/**
-			 * Top-level menu items
-			 */
-			 	font-weight: 700;
-				font-family: 'Open Sans Condensed', sans-serif;
-				text-transform: uppercase;
-			}
+.dropdown {	
+	box-sizing: border-box;
+	z-index: 10;
 
-			& > ul > li.active > a {
-				margin-bottom: -1px;
-				border-bottom: 1px solid darken($topbar-link-bg-active, 10%);
-			}
+	// Nested-menus
+	.dropdown {
+		margin-top: -1px;
+		border-top: 1px solid #ddd;
+	}
 
-			.dropdown {
-			/**
-			 * Dropdown Menu
-			 */
-				box-sizing: border-box;
-				z-index: 10;
+	li {
+		border-left: 1px solid darken($topbar-dropdown-bg, 10%);
+		border-right: 1px solid darken($topbar-dropdown-bg, 10%);
+		border-bottom: 1px solid darken($topbar-dropdown-bg, 10%);
+	}
 
-				.dropdown {
-					/* Remove top margin for subsequent sub-menus */
-					margin-top: -1px;
-					border-top: 1px solid #ddd;
-				}
-
-				li {
-					/**
-					 * Dropdown menu item
-					 */
-					a {
-						font-size: emCalc(14px);
-						padding-top: 0.7em;
-						padding-bottom: 0.7em;
-					}
-
-					border-left: 1px solid darken($topbar-dropdown-bg, 10%);
-					border-right: 1px solid darken($topbar-dropdown-bg, 10%);
-					border-bottom: 1px solid darken($topbar-dropdown-bg, 10%);
-
-					&.active {
-						border-left: 1px solid $topbar-link-bg-active;
-						border-right: 1px solid $topbar-link-bg-active;
-						border-bottom: 1px solid $topbar-link-bg-active;
-					}
-				}
-
-			} /* end .dropdown */
-
-		} /* end .top-bar-section */
-	} /* end .top-bar */
-} /* end .contain-to-grid */
+	li.active {
+		border-left: 1px solid $topbar-link-bg-active;
+		border-right: 1px solid $topbar-link-bg-active;
+		border-bottom: 1px solid $topbar-link-bg-active;
+	}
+} /* end .dropdown */
 
 .entry-meta {
-	font-size: emCalc(14px);
-	margin-bottom: 1em;
-	line-height: 1em;
 	color: #999;
-
+	margin: 1em 0;
+	
 	p {
 		margin: 0;
 	}
 }
 
-.meta-container {
-	text-align: right;
-}
-
-.avatar {
-	padding: 3px;
-	margin: 3px;
-	border: 1px solid #ddd;
-	box-shadow: 0 0 5px #ddd;
-	border-radius: 100%;
+.container {
+	margin: 2em auto 4em;
 }
 
 .container > section > .row,
 .container > .row {
-	padding-top: emCalc(30);
-	padding-bottom: emCalc(30);
+	// padding-top: emCalc(30);
+	// padding-bottom: emCalc(30);
 }
 
-.hero {
-	text-align: justify;
 
-	.row {
-		padding-bottom: 0 !important;
-	}
-}
-
+/**
+ * Footer
+ */
 @include sticky-footer(88px);
 
 #footer {
 	background: #111;
 	padding-top: 1em;
-	// margin-top: emCalc(30);
-
-	p {
-		font-size: emCalc(14);
-	}
 }
 
+
+
+/*
+	The rest of this file is Reverie styles for Wordpress classes
+*/
 .single-post [role="main"] {
 	padding-left: 0 !important;
 }

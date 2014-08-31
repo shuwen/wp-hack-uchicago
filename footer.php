@@ -18,11 +18,16 @@
 
 <script>
 	$(document).ready(function() {
+
+		$('.site-title').bigtext();
+
 		$(document).foundation();
+
 		$(".contain-to-grid").headroom({
+			offset: $('header').height()+45,
 			tolerance: {
 				up: 0,
-				down: 45
+				down: 10
 			} // Topbar height
 		});
 	});
